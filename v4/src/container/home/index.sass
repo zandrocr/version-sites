@@ -1,0 +1,120 @@
+#home 
+	display: flex
+	position: relative
+	justify-content: center
+	flex-direction: column
+	align-items: end
+	min-height: 100vh
+	color: var(--color-wite)
+	background: var(--color-blue)
+	background-image: url("../../assets/fundo.svg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	background-attachment: fixed
+	animation: open .3s ease-in
+
+	.nomeImagem
+		z-index: 1
+		display: flex
+		align-items: center
+
+		.titulos
+			display: flex
+			align-items: end
+			flex-direction: column
+			width: 80vh
+			animation: var(--animation-out) linear
+			animation-range: exit -250%
+			animation-timeline: view()
+
+			.titulo
+				width: 80vh
+				height: 40px
+				display: flex
+				justify-content: center
+				border-bottom: solid 1px var(--color-wite)
+				animation: open .8s ease-in
+
+				h1
+					font-weight: 100
+					margin-bottom: -11px
+					font-size: 50px
+					overflow: hidden
+					letter-spacing: 3px
+					border-right: 2px solid var(--color-one) 
+					animation: var(--animation-barra-black) 3s step-end
+					animation-fill-mode: forwards
+
+			.subtitulo
+				width: 40vh
+				display: flex
+				justify-content: center
+				margin-top: 13px
+				animation: open 1s ease-in
+				p
+					font-weight: 100
+					font-size: 20px
+					overflow: hidden
+					border-right: 2px solid var(--color-one) 
+					animation: var(--animation-barra-black) 3s step-end
+					animation-fill-mode: forwards		
+
+	.texto
+		margin: 10% 5% 0 0
+		position: absolute
+		animation: var(--animation-in) linear, var(--animation-out) linear
+		animation-range: exit -50%
+		animation-timeline: view()
+
+		p
+			margin: 0
+			font-size: 20px
+			animation: open 1.2s ease-in 
+			animation-fill-mode: forwards
+
+	.ondaSvg
+		bottom: 0px
+			
+@keyframes open
+	0%
+		opacity: 0
+	50%
+		opacity: 0
+	100%
+		opacity: 1
+
+@media screen and ( max-width: 768px )
+	#home 
+		background-attachment: local
+		.nomeImagem
+			flex-direction: column
+			.titulos
+				margin-top: 20vh
+				width: 100vw
+				.titulo
+					width: 90vw
+					h1
+						animation: var(--animation-barra-black) 2s step-end
+						animation-fill-mode: forwards
+
+					@keyframes zandrocrMobi
+						0%
+							width: 0ch
+						50%
+							width: 11.3ch
+						100%
+							width: 11.3ch
+			.zandrocr
+				margin-top: 5vh
+				height: 60vh
+				width: 40vh				
+
+		.texto	
+			padding: 2vh
+			position: static
+			animation-range: entry 0%, exit -300%
+		
+		.ondaSvg
+			svg 
+				height: 101px

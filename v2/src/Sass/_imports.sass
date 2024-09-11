@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather&family=Oswald:wght@400&display=swap')
+
+$oswald: 'Oswald', sans-serif
+$merri: 'Merriweather', serif
+$bebas: 'Bebas Neue', cursive
+
+$grey: #BDC0BF
+$dark: #242424
+$white: #ffffff
+$black: #000000
+$blue: #33A9DC
+
+    
+.background
+    height: 100vh
+    .page
+        height: 90vh
+        margin-top: 8vh
+        border-radius: 0 20vh 0 0
+        background: $grey
+        transition: .5s
+        box-shadow: $black 0 0px 30px 5px
+
+@media screen and ( max-width: 576px )
+    .background
+        .page
+            border-radius: 0 15vh 0 0

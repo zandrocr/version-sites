@@ -1,0 +1,106 @@
+@import 'imports'
+
+#habilidades
+    height: fit-content
+    z-index: 10
+    color: $white
+
+    .page
+        height: fit-content
+        background: none
+        box-shadow: none
+
+    svg
+        font-size: 25px
+        transition: .5s
+        &:hover
+            color: $blue
+
+    .lingua
+        padding: 2vh
+        svg
+            padding: 1vh
+            height: 8vh
+            width: 8vh
+            transition: .3s
+            &:hover
+                padding: 2vh
+
+    .line
+        width: 40vh
+        height: .6vh
+        border-radius: 5vh
+        background: $white
+        transition: .5s
+
+    svg:hover ~ span .line
+        width: 10vh
+
+    .html1
+        color: #f34f03
+    .html
+        background: #f34f03
+
+    .css1
+        margin-left: 5vh
+        color: #0373f3
+    .css
+        margin-left: 5vh
+        background: #0373f3
+
+    .js1
+        margin-left: 10vh
+        color: #f3db03
+    .js
+        margin-left: 10vh
+        background: #f3db03
+
+    .jquery1
+        color: #034ff3
+    .jquery
+        background: #034ff3
+
+    .bootstrap1
+        margin-left: 5vh
+        color: #6b03f3
+    .bootstrap
+        margin-left: 5vh
+        background: #6b03f3
+
+    .react1
+        margin-left: 10vh
+        color: #0387f3
+    .react
+        margin-left: 10vh
+        background: #0387f3
+
+    .sass1
+        color: #9c0161
+    .sass
+        background: #9c0161
+
+    .angular1
+        margin-left: 5vh
+        color: #d4002e
+    .angular
+        margin-left: 5vh
+        width: 10vh
+        background: #ffffff
+
+    .java1
+        margin-left: 10vh
+        color: #0387f3
+    .java
+        margin-left: 10vh
+        width: 10vh
+        background: #7e001b
+
+
+@media screen and ( max-width: 768px )
+    #habilidades
+        .page
+            height: fit-content
+        .line
+            width: 20vh
+        p
+            margin-top: 2vh

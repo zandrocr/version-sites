@@ -1,0 +1,59 @@
+@import 'imports'
+
+#contato
+    .page
+        padding: 2vh
+        padding-bottom: 0
+        color: $white
+        border-radius: 0
+        height: 95vh
+        background: none
+
+        p
+            margin: 0
+            margin-top: 2vh
+
+    a
+        text-decoration: none
+
+    button
+        border-radius: 1vh
+        background: $dark
+        color: $white
+        transition: .3s
+        padding: 1vh
+        border: solid 1px $blue
+        &:hover
+            background: #00b4cc31
+
+    .back
+        margin: 0
+        background: $grey
+        border-radius: 5vh 5vh 0 0
+        p
+            margin: 0
+            color: $black
+            font-size: 15px
+
+    svg
+        font-size: 30px
+        color: $grey
+        transition: .3s
+        &:hover
+            color: $blue
+
+    img
+        padding: 2vh
+
+@media screen and ( max-height: 768px )
+    #contato
+        .back
+            border-radius: 2vh 2vh 0 0
+            p
+                font-size: 10px
+
+@media screen and ( max-width: 576px )
+    #contato
+        .back
+            p
+                font-size: 8px

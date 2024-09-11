@@ -1,0 +1,79 @@
+.c
+    [data-line]
+        width: 35vh
+
+    [data-line='cTop']
+        animation: cLinetop 1s infinite alternate
+        background: #fff
+        height: 5vh
+        border-radius: 5vh 5vh 0vh 5vh
+
+    [data-line='mid']
+        animation: cMid 1s infinite alternate
+        height: 25vh
+
+        .mid-top
+            animation: cTop 1s infinite alternate
+            background: #33A9DC
+            width: 7vh
+            height: 10vh
+            border-radius: 0vh 0vh 0vh 10vh
+
+        .mid-down
+            animation: cDown 1s infinite alternate
+            background: #fff
+            width: 7vh
+            height: 10vh
+            border-radius: 0vh 10vh 0vh 0vh
+
+    [data-line='down']
+        animation: cLineDown 1s infinite alternate
+        background: #fff
+        height: 5vh
+        border-radius: 5vh 0vh 5vh 5vh
+
+    //animation c
+    //animation top
+    @keyframes cLinetop
+        0%
+            width: 0
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            width: 35vh
+            border-radius: 5vh 5vh 0vh 5vh
+
+    //animation mid
+    @keyframes cTop
+        0%
+            margin-right: 18vh
+            width: 0vh
+            height: 10vh
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            height: 10vh
+            border-radius: 0vh 0vh 0vh 10vh
+
+    @keyframes cMid
+        0%
+            height: 0vh
+        100%
+            height: 25vh
+
+    @keyframes cDown
+        0%
+            margin-right: 18vh
+            width: 0vh
+            height: 10vh
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            height: 10vh
+            border-radius: 0vh 10vh 0vh 0vh
+
+    //animation down
+    @keyframes cLineDown
+        0%
+            width: 0
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            width: 35vh
+            border-radius: 5vh 0vh 5vh 5vh

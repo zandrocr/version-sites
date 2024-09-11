@@ -1,0 +1,58 @@
+.r
+    margin-left: 5vh
+
+    [data-line='top']
+        animation: rTop 1s infinite alternate
+        background: #fff
+        border-radius: 0vh 20vh 20vh 20vh
+        height: 20vh
+        width: 25vh
+
+    [data-line='mid']
+        animation: rMid 1s infinite alternate
+        background: #fff
+        border-radius: 0vh 10vh 5vh 5vh
+        height: 15vh
+        width: 5vh
+
+    [data-line='down']
+        animation: rDown 1s infinite alternate
+        transform: rotate(320deg)
+        margin: 0vh 2vh 0vh 6vh
+        background: #33A9DC
+        border-radius: 10vh 0vh 5vh 5vh
+        height: 10vh
+        width: 5vh
+
+    //animation top
+    @keyframes rTop
+        0%
+            height: 0
+            width: 0
+            border-radius: 150vh
+        100%
+            height: 20vh
+            transform: rotate(360deg)
+            border-radius: 0vh 20vh 20vh 20vh
+
+    //animation middle
+    @keyframes rMid
+        0%
+            width: 0
+            height: 0
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            height: 15vh
+            transform: rotate(360deg)
+            border-radius: 0vh 20vh 20vh 20vh
+
+    //animation middle
+    @keyframes rDown
+        0%
+            height: 0
+            width: 0
+            transform: rotate(0deg)
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            transform: rotate(320deg)
+            border-radius: 0vh 20vh 20vh 20vh

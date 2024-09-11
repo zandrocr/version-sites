@@ -1,0 +1,62 @@
+#sobre
+    display: flex
+    justify-content: center
+    align-items: center
+    justify-content: center
+    min-height: 100vh
+    background: var(--color-blue)
+    .texto
+        width: 40%
+        p
+            color: var(--color-white)
+            margin-top: 5vh
+        .paragrafos
+            margin-top: 10vh
+    p        
+        animation: animate-text ease-in-out
+        animation-timeline: view()
+        animation-range: cover 0% cover 20%
+    img
+        width: 40%
+        animation: animate-img ease-in-out
+        animation-timeline: view()
+        animation-range: cover 0% cover 50%
+
+@media screen and ( max-width: 768px )
+    #sobre
+        margin-top: 10vh
+        padding-bottom: 5vh 
+        flex-direction: column
+        .texto
+            width: 90%
+        img
+            opacity: .1
+            width: 90%
+            position: absolute
+            animation: animate-img-mobi ease-in-out
+            animation-timeline: view()
+            animation-range: cover 0% cover 60%
+
+@keyframes animate-text 
+    0%  
+        opacity: 0 
+        translate: -100vw 0
+    100%  
+        opacity: 1 
+        translate: 0 0
+
+@keyframes animate-img 
+    0%  
+        opacity: 0 
+        transform: translateY(100%)
+    100%  
+        opacity: 1 
+        transform: translateY(0)
+
+@keyframes animate-img-mobi
+    0%  
+        opacity: 0 
+        transform: translateY(100%)
+    100%  
+        opacity: .1 
+        transform: translateY(0)

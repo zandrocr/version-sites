@@ -1,0 +1,79 @@
+@import 'imports'
+
+.zcrLogo
+    align-items: center
+    justify-content: center
+    .z
+        .mid-top, .mid-down, [data-line='mid'], .mid-top, .mid-down, [data-icon], [data-icon='top'], [data-icon='down'], [data-line='down']
+            animation: none
+        [data-line='top']
+            width: 5vh
+        .mid-top
+            transition: .5s
+            width: 2vh
+            height: 1vh
+        .mid-down
+            transition: .5s
+            width: 2vh
+            height: 1vh
+
+        [data-line='mid']
+            margin-top: .5vh
+            transform: rotate(210deg)
+            width: 6vh
+            height: 1vh
+            .mid-down
+                transition: .5s
+                height: 1vh
+        [data-line='down']
+            width: 5vh
+            margin-top: .5vh
+            .mid-down
+                transition: .5s
+                height: 1vh
+
+    .c
+        [data-line='cTop'], [data-line='mid'], .mid-top, .mid-down, [data-line='down']
+            animation: none
+        [data-line='cTop']
+            width: 5vh
+            transition: .5s
+            height: 1vh
+        .mid-top
+            transition: .5s
+            width: 1vh
+            height: 1vh
+        .mid-down
+            transition: .5s
+            width: 1vh
+            height: 1vh
+        [data-line='mid']
+            width: 5vh
+            height: 2vh
+        [data-line='down']
+            transition: .5s
+            width: 5vh
+            height: 1vh
+    .r
+        margin-left: .5vh
+        [data-line='top'], [data-line='mid'], [data-line='down']
+            animation: none
+        [data-line='top']
+            width: 3vh
+            height: 2vh
+            transition: .5s
+        [data-line='mid']
+            width: 1vh
+            height: 2vh
+            transition: .5s
+        [data-line='down']
+            margin-left: .5vh
+            width: 1vh
+            height: 1.5vh
+            transition: .5s
+
+.zcrLogo:hover .z [data-line='top'] .mid-down, .zcrLogo:hover .z [data-line='down'] .mid-top, .zcrLogo:hover .c [data-line='mid'] .mid-top, .zcrLogo:hover .r [data-line='down']
+    background: $white
+
+.zcrLogo:hover .z [data-line='top'] .mid-top, .zcrLogo:hover .z [data-line='down'] .mid-down, .zcrLogo:hover .z [data-line='mid'] .mid-down, .zcrLogo:hover .z [data-line='mid'] .mid-top, .zcrLogo:hover .c [data-line='cTop'], .zcrLogo:hover .c [data-line='mid'] .mid-down, .zcrLogo:hover .c [data-line='down'], .zcrLogo:hover .r [data-line='top'], .zcrLogo:hover .r [data-line='mid']
+    background: $blue

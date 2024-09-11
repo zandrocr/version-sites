@@ -1,0 +1,151 @@
+#home 
+	background: linear-gradient(90deg, var(--color-blue) 50.7%, rgba(0,212,255,0) 50%)
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: end
+	min-height: 100vh
+
+	.logo
+		z-index: 5
+		height: 8vh
+		left: 1vh
+		top: 1vh
+		position: fixed
+
+	.nomeImagem
+		z-index: 1
+		display: flex
+		align-items: center
+
+		.titulos
+			display: flex
+			align-items: end
+			flex-direction: column
+			width: 80vh
+
+			.titulo
+				width: 80vh
+				height: 40px
+				display: flex
+				justify-content: center
+				border-bottom: solid 1px var(--color-black)
+				animation: foto 1s ease-in
+
+
+				h1
+					font-weight: 100
+					margin-bottom: -11px
+					font-size: 50px
+
+					overflow: hidden
+					border-right: 2px solid var(--color-black) 
+					letter-spacing: 3px
+					animation: var(--animation-barra-black) .5s step-end, zandrocr 1s steps(9, end)
+					animation-fill-mode: forwards
+
+					@keyframes zandrocr
+						0%
+							width: 0ch
+						50%
+							width: 10.7ch
+						100%
+							width: 10.7ch
+
+			.subtitulo
+				width: 40vh
+				display: flex
+				height: 30px
+				justify-content: center
+				border-bottom: solid 1px var(--color-black)
+				animation: foto 1s ease-in
+
+				h2
+					font-weight: 100
+					margin-bottom: -5px
+					margin-top: 2vh
+					font-size: 20px
+
+					overflow: hidden
+					border-right: 2px solid var(--color-black) 
+					animation: var(--animation-barra-black) 1s step-end, dev 1s steps(10, end) 
+					animation-fill-mode: forwards	
+
+					@keyframes dev
+						0%
+							width: 0ch
+						50%
+							width: 9ch
+						100%
+							width: 9ch
+
+		.zandrocr
+			height: 80vh
+			border-radius: 2vh
+			border-bottom: solid var(--color-black) 5px
+			border-left: solid var(--color-black) 5px
+			animation: foto 1s ease-in
+
+			@keyframes foto
+				0%
+					opacity: 0
+				50%
+					opacity: 0
+				100%
+					opacity: 1
+
+	.texto
+		margin: 25% 15% 0 0
+		position: absolute
+		p
+			margin: 0
+			font-size: 20px
+			animation: text 1s ease-in 
+			animation-fill-mode: forwards
+			
+		@keyframes text
+			0%
+				opacity: 0
+			50%
+				opacity: 0
+			100%
+				opacity: 1
+
+@media screen and ( max-width: 768px )
+	#home 
+		padding-top: 15vh
+		.nomeImagem
+			flex-direction: column
+			.titulos
+				width: 100vw
+				.titulo
+					width: 90vw
+					height: 24px
+					h1
+						font-size: 30px
+						margin-bottom: -7px
+						animation: var(--animation-barra-black) .5s step-end, zandrocrMobi 1s steps(10, end) 
+						animation-fill-mode: forwards	
+
+					@keyframes zandrocrMobi
+						0%
+							width: 0ch
+						50%
+							width: 11.3ch
+						100%
+							width: 11.3ch
+				.subtitulo
+					width: 70vw
+					height: 24px
+					h2
+						font-size: 15px       
+						margin-bottom: -3px
+			.zandrocr
+				margin-top: 5vh
+				height: 60vh
+				width: 40vh				
+
+		.texto	
+			padding: 2vh
+			position: static		
+			margin: 5% 0% 0 0

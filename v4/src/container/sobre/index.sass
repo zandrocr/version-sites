@@ -1,0 +1,77 @@
+#sobre
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    justify-content: center
+    min-height: 100vh
+    background: var(--color-black)
+    background-image: url("../../assets/fundo2.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    background-attachment: fixed
+    color: var(--color-wite)
+    padding: 15vh 0 
+    
+    .texto
+        width: 40%
+        p  
+            margin-top: 5vh            
+        .paragrafos
+            margin-top: 10vh
+    p     
+        animation: animate-text ease-in-out
+        animation-timeline: view()
+        animation-range: cover 0% cover 20%
+    img
+        width: 40%
+        animation: var(--animation-in) linear, var(--animation-out) linear
+        animation-range: entry 0%, exit 10%
+        animation-timeline: view()
+
+    .ondaSvg
+        top: 0vh
+        transform: rotate(180deg)
+
+@media screen and ( max-width: 768px )
+    #sobre
+        background-attachment: local
+        flex-direction: column
+        .texto
+            width: 90%
+        img
+            opacity: .1
+            width: 90%
+            position: absolute
+            animation: animate-img-mobi
+            animation-range: entry 0%, exit 10%
+            animation-timeline: view()
+        .ondaSvg
+            top: -1px
+            svg 
+                height: 101px
+
+@keyframes animate-text 
+    0%  
+        opacity: 0 
+        translate: -100vw 0
+    100%  
+        opacity: 1 
+        translate: 0 0
+
+@keyframes animate-img 
+    0%  
+        opacity: 0 
+        transform: translateY(100%)
+    100%  
+        opacity: 1 
+        transform: translateY(0)
+
+@keyframes animate-img-mobi
+    0%  
+        opacity: 0 
+        transform: translateY(100%)
+    100%  
+        opacity: .1 
+        transform: translateY(0)

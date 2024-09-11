@@ -1,0 +1,50 @@
+@import 'imports'
+
+#projetos
+    font-family: $merri
+    height: fit-content
+    .page
+        height: fit-content
+        z-index: 10
+        background: none
+        box-shadow: none
+
+        .page
+            margin: 0
+            height: fit-content
+            padding: 2vh
+            background: $grey
+            border-radius: 1vh 7vh 1vh 7vh
+
+    .video
+        margin-top: 10vh
+        
+    p, svg
+        color: $black
+
+    svg, path
+        font-size: 25px
+        transition: .3s
+        &:hover
+            color: $blue
+
+    h2
+        color: $white
+        font-family: $bebas
+        margin-left: 5vh
+
+    .line
+        background: $grey
+        width: 30vh
+        height: .2vh
+        margin-left: 2vh
+
+    .aba
+        height: 50vh
+
+@media screen and ( max-height: 768px )
+    #projetos
+        .line
+            width: 20vh
+
+@media screen and ( max-width: 576px )

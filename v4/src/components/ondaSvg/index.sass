@@ -1,0 +1,28 @@
+.ondaSvg
+    position: absolute
+    left: 0
+    width: 100%
+    overflow: hidden
+    line-height: 0
+
+    svg 
+        position: relative
+        display: block
+        width: calc(166% + 1.3px)			
+        height: 201px
+        animation: onda-in ease-in-out 8s infinite, onda-out ease-in-out 8s infinite
+
+    .shape-fill 
+        fill: var(--color-wite)
+
+@keyframes onda-in
+    0%
+        width: calc(166% + 1.3px)
+    100%
+        width: calc(26% + 1.3px)	
+		
+@keyframes onda-out
+    100%
+        width: calc(26% + 1.3px)
+    100%
+        width: calc(166% + 1.3px)	

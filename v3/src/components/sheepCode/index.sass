@@ -1,0 +1,66 @@
+#sheep
+    left: 15vh
+    margin-bottom: 15vh
+    position: absolute
+
+    p
+        margin: 0
+        font-size: 200px
+        font-weight: 500
+        font-family: var(--font-code)
+        color: var(--color-seconde)
+        
+        letter-spacing: 10px
+        white-space: nowrap
+        overflow: hidden
+
+    p:nth-child(1)
+        animation: var(--animation-barra-one) .5s step-end , escrita1 1s steps(5, end)  
+        animation-fill-mode: forwards  
+
+    p:nth-child(2)
+        animation: var(--animation-barra-one) .5s step-end , escrita2 1s steps(4, end) 
+        animation-fill-mode: forwards
+
+@media screen and ( max-width: 768px )
+    #sheep
+        left: 0vh
+        top: 5vh
+        position: absolute
+        p
+            font-size: 8em
+            color: var(--color-seconde--moblie)
+
+@keyframes escrita1
+    0%
+        width: 0ch
+    50%
+        width: 5.1ch
+    100%
+        width: 5.1ch
+
+@keyframes escrita2
+    0%
+        width: 0
+    50%
+        width: 4.2ch
+    100%
+        width: 4.2ch
+
+
+@keyframes animate-in 
+    0%  
+        opacity: 0 
+        transform: translateY(100%)
+    100%  
+        opacity: 1 
+        transform: translateY(0)
+
+@keyframes animate-out 
+    0%  
+        opacity: 1 
+        transform: translateY(0)
+    100% 
+        opacity: 0 
+        transform: translateY(-100%)      
+        

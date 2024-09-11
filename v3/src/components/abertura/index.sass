@@ -1,0 +1,51 @@
+#abertura
+    position: relative
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+    section
+        width: 100vw
+        height: 100vh
+        display: flex
+
+        div
+            height: 100vh
+
+        div:nth-child(1)
+            right: 0
+            width: 50vw
+            animation: fundo .5s ease-in
+            animation-fill-mode: forwards
+
+        div:nth-child(2)
+            left: 0
+            width: 50vw
+            background: var(--color-blue)
+
+        @keyframes fundo
+            100%
+                width: 0vw
+
+    img
+        position: absolute
+        width: 50vw
+        top: 10vh
+        left: 25vw
+        animation: logo .5s ease-in
+        animation-fill-mode: forwards
+
+        @keyframes logo
+            100%
+                width: 9vh
+                left: 1vh
+                top: 1vh  
+
+@media screen and ( max-width: 768px )
+    #abertura
+        img
+            left: 0
+            top: 40vh
+            width: 100vw
+

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap')
+
+:root
+  --color-blue: #0092cc
+  --color-blue-light: #2ec4ff23
+  --color-wite: #fff
+  --color-wite-mobi: #ffffff44
+  --color-black: #001122
+  --color-one: #bbbfbe
+  --color-seconde: #9e9e9e81
+  --color-seconde--moblie: #9e9e9e3d
+  --font-code: handjet
+  --animation-barra-one: animationOne
+  --animation-barra-black: animationBlack
+  --animation-in: animate-in 
+  --animation-out: animate-out
+
+body::-webkit-scrollbar
+    display: none
+
+.logo
+    z-index: 5
+    height: 8vh
+    width: 8vh
+    left: 1vh
+    top: 1vh
+    position: fixed
+    border-radius: 100%
+    animation: show-logo 
+    animation-timeline: scroll()
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+    @keyframes show-logo
+        0%
+            background-image: url("./assets/logowite.svg")
+        50%
+            background-image: url("./assets/logoblack.svg")
+        100%
+            background-image: url("./assets/logowite.svg")
+
+
+@keyframes animationOne
+    0%
+        border-right: 5px solid var(--color-one) 
+    10%
+        border-right-color: transparent
+    20%
+        border-right: 5px solid var(--color-one)
+    30%
+        border-right-color: transparent
+    40%
+        border-right: 5px solid var(--color-one)
+    50%
+        border-right-color: transparent
+    60%
+        border-right: 5px solid var(--color-one) 
+    70%
+        border-right-color: transparent
+    80%
+        border-right: 5px solid var(--color-one) 
+    90%
+        border-right-color: transparent
+    100%
+        border: none
+
+@keyframes animationBlack
+    0%
+        border-right: 2px solid var(--color-one) 
+    10%
+        border-right-color: transparent
+    20%
+        border-right: 2px solid var(--color-one) 
+    30%
+        border-right-color: transparent
+    40%
+        border-right: 2px solid var(--color-one) 
+    50%
+        border-right-color: transparent
+    60%
+        border-right: 2px solid var(--color-one)  
+    70%
+        border-right-color: transparent
+    80%
+        border-right: 2px solid var(--color-one)  
+    90%
+        border-right-color: transparent
+    100%
+        border-right-color: transparent
+
+@keyframes animate-in 
+    0%  
+        opacity: 0 
+        transform: translateY(100%)
+    100%  
+        opacity: 1 
+        transform: translateY(0)
+
+@keyframes animate-out 
+    0%  
+        opacity: 1 
+        transform: translateY(0)
+    100% 
+        opacity: 0 
+        transform: translateY(-100%)

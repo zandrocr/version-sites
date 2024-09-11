@@ -1,0 +1,156 @@
+.z
+    [data-line='top']
+        .mid-top
+            background: #fff
+            animation: firstTop 1s infinite alternate
+            height: 5vh
+            width: 25vh
+            border-radius: 5vh 0vh 10vh 5vh
+
+        .mid-down
+            background: #33A9DC
+            animation: secondTop 1s infinite alternate
+            height: 5vh
+            width: 10vh
+            border-radius: 10vh 5vh 5vh 0vh
+
+
+    [data-line='mid']
+        animation: mid 1s infinite alternate
+        width: 50vh
+        margin-top: 9vh
+        transform: rotate(40deg)
+
+        .mid-top
+            background: #fff
+            animation: firstMid 1s infinite alternate
+            border-radius: 5vh 10vh 0vh 5vh
+
+        .mid-down
+            background: #fff
+            animation: secondMid 1s infinite alternate
+            border-radius: 0vh 5vh 5vh 10vh
+
+    //icon
+    [data-icon]
+        animation: icon 1s infinite alternate
+        width: 0vh
+        height: 0vh
+        border-left: 3vh solid transparent
+        border-right: 3vh solid transparent
+        border-bottom: 3vh solid #33A9DC
+
+    [data-icon='top']
+        transform: rotate(-40deg)
+        margin-bottom: 3vh
+
+    [data-icon='down']
+        transform: rotate(140deg)
+
+    //line down
+    [data-line='down']
+        animation: down 1s infinite alternate
+        margin-top: 9vh
+
+        .mid-top
+            background: #33A9DC
+            animation: firstDown 1s infinite alternate
+            height: 5vh
+            width: 10vh
+            border-radius: 5vh 0vh 10vh 5vh
+
+        .mid-down
+            background: #fff
+            animation: secondDown 1s infinite alternate
+            height: 5vh
+            width: 25vh
+            border-radius: 15vh 5vh 10vh 0vh
+
+    //animate
+    //top animate
+    @keyframes firstTop
+        0%
+            height: 5vh
+            width: 0vh
+            border-radius: 0
+        100%
+            height: 5vh
+            width: 25vh
+            border-radius: 5vh 0vh 10vh 5vh
+
+    @keyframes secondTop
+        0%
+            height: 5vh
+            width: 0vh
+            border-radius: 0
+        100%
+            height: 5vh
+            width: 10vh
+            border-radius: 10vh 5vh 5vh 0vh
+
+    //middle animate
+    @keyframes mid
+        0%
+            width: 0vh
+            margin-top: 0
+            transform: rotate(0deg)
+        100%
+            width: 50vh
+            margin-top: 9vh
+            transform: rotate(40deg)
+
+    //icon animate
+    @keyframes icon
+        0%
+            width: 0vh
+            height: 0vh
+            border-left: 0vh solid transparent
+            border-right: 0vh solid transparent
+            border-bottom: 0vh solid #000000
+        100%
+            width: 0vh
+            height: 0vh
+            border-left: 3vh solid transparent
+            border-right: 3vh solid transparent
+            border-bottom: 3vh solid #33A9DC
+
+    //animate line middle
+    @keyframes firstMid
+        0%
+            height: 5vh
+            width: 0vh
+            border-radius: 0
+        100%
+            border-radius: 5vh 10vh 0vh 5vh
+
+    @keyframes secondMid
+        0%
+            height: 5vh
+            width: 0vh
+            border-radius: 0
+        100%
+            widht: 20vh
+
+    //bottom animate
+    @keyframes down
+        0%
+            margin-top: -2vh
+        100%
+            margin-top: 9vh
+
+    //animate lines
+    @keyframes firstDown
+        0%
+            width: 0vh
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            widht: 18vh
+            border-radius: 5vh 0vh 10vh 5vh
+
+    @keyframes secondDown
+        0%
+            width: 0vh
+            border-radius: 0vh 0vh 0vh 0vh
+        100%
+            width: 25vh
+            border-radius: 15vh 5vh 10vh 0vh

@@ -1,0 +1,77 @@
+#experiencia    
+    display: flex
+    align-items: center
+    justify-content: space-around
+    width: 90vw    
+    margin-top: 10vh
+    min-height: 50vh
+    animation: linear var(--animation-in), linear var(--animation-out)  
+    animation-range: entry 0%, exit -30%
+    animation-timeline: view()
+
+    .imgs
+        display: flex
+        position: relative
+        justify-content: center
+        align-items: center
+        width: 50vw
+        height: 35vh
+        img
+            position: absolute
+            width: 45vh
+            height: 25vh
+            cursor: pointer
+            transition: 0.5s ease-in-out  
+            border-radius: 1vh
+            border: solid 2px var(--color-wite)
+            &:hover
+                transform: scale(1.2)
+                  
+
+        img[alt="fundo"]
+            margin: 0 0 15vh 0vh  
+
+        img[alt="fundo"]:hover ~ img[alt="frente"]
+            opacity: 0
+            scale: 0
+
+    .descricao
+        width: 50vw
+        .texto
+            margin-top: 2vh
+        .tecnologias
+            display: flex 
+            margin-top: 5vh
+            justify-content: space-around            
+            span
+                z-index: 2
+                padding: 1px
+                display: flex
+                text-align: center
+                align-items: center
+                flex-direction: column
+                justify-content: center
+                border-radius: 5vh
+                width: 20%
+                height: 5vh
+                color: var(--color-wite)
+                background: var(--color-blue)
+                cursor: pointer
+                transition: .2s ease-in-out
+                &:hover
+                    transform: scale(.9)
+
+
+@media screen and ( max-width: 768px )
+    #experiencia 
+        align-items: center
+        justify-content: space-around
+        flex-direction: column
+        animation-range: entry -20%, exit 30%
+        .descricao
+            width: 100vw
+            p
+                padding: 1vh
+            .tecnologias
+                span
+                    font-size: 15px

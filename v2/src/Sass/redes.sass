@@ -1,0 +1,59 @@
+@import 'imports'
+
+#redes
+    z-index: 100
+    a
+        text-decoration: none
+        color: $white
+
+    .page
+        height: 92vh
+        background: none
+        box-shadow: none
+
+    .email
+        writing-mode: vertical-lr
+        transition: .3s
+        letter-spacing: 2px
+        font-size: 12px
+        margin-bottom: 3vh
+        &:hover
+            color: $blue
+            letter-spacing: 3px
+
+    .links
+        animation: top 1s
+        position: fixed
+        left: 0
+        bottom: 0
+        width: 6vh
+
+    .linksB
+        animation: top 1s
+        position: fixed
+        right: 0
+        bottom: 0
+        width: 6vh
+
+    .network
+        padding: 5px
+        font-size: 30px
+        margin-bottom: 3vh
+        transition: .3s
+        &:hover
+            color: $blue
+            padding: 2px
+
+    .line
+        width: .3vh
+        height: 10vh
+        background: $white
+
+
+@keyframes top
+    0%
+        bottom: -10vh
+    100%
+        bottom: 0
+
+
